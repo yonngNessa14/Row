@@ -1,0 +1,7 @@
+{
+  "elastic": {
+    "host": "http://localhost:9200",
+    "disk_hack": true
+  },
+  "host": "http://localhost:3000"
+}
