@@ -1,5 +1,5 @@
 import {delay} from "lodash";
-// import { APIUser, WorkoutStat } from 'sdk-library';
+import {APIUser, WorkoutStat} from "sdk-library";
 import WS from "ws";
 import {initApp} from "./app";
 
@@ -11,7 +11,7 @@ import {initApp} from "./app";
 
 export interface Message {
   type: string;
-  user?: any;
+  user?: APIUser;
 }
 
 //  Online Members
@@ -73,7 +73,7 @@ const announcements: HostAnnouncementMessage[] = [];
 const LEADERBOARD_STAT_MESSAGE_TYPE = "workout-stat";
 export interface LeaderboardStatMessage extends Message {
   type: "workout-stat";
-  stat: any;
+  stat: WorkoutStat;
 }
 
 //  Log Past Messages?
